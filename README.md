@@ -1,10 +1,2 @@
 ###个人笔记
 记录工作中遇到的一些问题
-<p>
-\begin{align}\notag 
-\dot{x}&=\mathbf{A}x+\mathbf{B}u\\
-y&=\begin{bmatrix}1&0\\
-0&1\end{bmatrix}x+\begin{bmatrix}1&0\\
-0&1\end{bmatrix}u
-\end{align}
-</p>
