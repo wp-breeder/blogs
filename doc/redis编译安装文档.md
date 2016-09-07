@@ -38,7 +38,7 @@
 
 >执行 `source /etc/profile` 立即生效，以后redis的启动服务命令是：
 
-		sudo redis-server redis.conf
+		sudo redis-server /usr/local/redis-3.2.2/redis.conf
 
 >3.查看`redis`服务是否正常启动。
 
