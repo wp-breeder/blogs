@@ -8,7 +8,8 @@
 解压安装包，无需安装
 
 ####3. 设置环境变量
-ORACLE_HOME 值为instant client所在目录路径
+ORACLE_HOME 值为instant client所在目录路径:
+<br/>
 example:
 ```
 解压到D:\instantclient_11_2
@@ -19,8 +20,9 @@ example:
 ####4. 开启PHP扩展	
 打开 php_oci8扩展 php_pdo_oci扩展
 ####5. 解决乱码
-乱码产生的原因是oracle客户端连接时跟oracle数据库使用的编码不一致
-查询Oracle字符集
+乱码产生的原因是oracle客户端连接时,跟oracle数据库使用的编码不一致.
+<br/>
+查询Oracle字符集:
 ```sql
 select * from nls_database_parameters;
 ```
