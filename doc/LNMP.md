@@ -111,12 +111,14 @@ sudo make install
 ```
 
 ![](https://github.com/wp-Breeder/Personal-essay/blob/master/doc/_images/2016-12-01-13-01-15.jpg)
+
 7) 安装完成，创建php配置文件目录，并且复制php.ini到该目录.
 ```shell
 sudo mkdir /etc/php
 sudo cp php.ini-development /etc/php/php.ini
 ```
 ![](https://github.com/wp-Breeder/Personal-essay/blob/master/doc/_images/2016-12-01-13-03-27.jpg)
+
 8) **添加环境变量**，打开系统环境变量目录，在末尾添加,保存后，在终端输入source /etc/profile.
 ```shell
 sudo vi /etc/profile
@@ -259,20 +261,30 @@ sudo apt-get install mysql-server mysql-client
 用户的密码，输入了按回车.
 
 ![](https://github.com/wp-Breeder/Personal-essay/blob/master/doc/_images/2016-12-01-18-13-00.jpg)
+
 此时会提示你再次输入，你就再输入，必须与刚才的密码一致.
+
 ![](https://github.com/wp-Breeder/Personal-essay/blob/master/doc/_images/2016-12-01-18-13-19.jpg)   
+
 输入完成按回车，等待安装完成，mysql就安装好了.
+
 ##5. 安装phpMyadmin
+
 1) 下载安装包phpMyAdmin-4.6.3-all-languages.tar.gz
+
 ![](https://github.com/wp-Breeder/Personal-essay/blob/master/doc/_images/2016-12-01-18-14-51.jpg)
+
 2) 解压到任意目录(建议解压到/var/www/)
+
 ```shell
 cd  /var/www
 sudo tar -zvxf phpMyAdmin-4.6.3-all-languages.tar.gz
 sudo mv phpMyAdmin-4.6.3-all-languages  phpmyadmin
 ```
 ![](https://github.com/wp-Breeder/Personal-essay/blob/master/doc/_images/2016-12-01-18-16-46.jpg)
+
 3) 解压完成后可以看到一个文件夹phpMyAdmin-4.6.3-all-languages，进入该文件夹，拷贝配置文件,打开配置页面，修改$cfg['blowfish_secret'] 的值，
+
 ```shell
 #如:
 ($cfg['blowfish_secret'] = 'www.airocov.com').
@@ -283,6 +295,7 @@ $cfg['Servers'][$i]['host'] = '127.0.0.1'
 #(防止出现2002错误) .
 #删除Storage database and tables这个下面所有选项的注释，到此配置结束。
 ```
+
 ```shell
 cd  phpmyadmin/
 sudo   cp   config.sample.inc.php  config.inc.php
@@ -294,7 +307,9 @@ sudo  vi  config.inc.php
 ![](https://github.com/wp-Breeder/Personal-essay/blob/master/doc/_images/2016-12-01-18-25-27.jpg)
 
 ![](https://github.com/wp-Breeder/Personal-essay/blob/master/doc/_images/2016-12-01-18-25-40.jpg)
+
 4) 创建Nginx下关于phpmyadmin的配置文件，并修改配置。
+
 ```shell
 sudo vi  /etc/nginx/conf.d/phpmyadmin.conf
 #复制以下内容
@@ -342,6 +357,7 @@ mysql  -uroot -p密码
 按回车进入mysql
 
 ![](https://github.com/wp-Breeder/Personal-essay/blob/master/doc/_images/2016-12-01-18-27-22.jpg)
+
 ```shell
 #创建数据库phpmyadmin
 create database phpmyadmin
@@ -353,6 +369,7 @@ source  /var/www/phpmyadmin/sql/create_tables.sql
 ![](https://github.com/wp-Breeder/Personal-essay/blob/master/doc/_images/2016-12-01-18-28-13.jpg)
 
 ![](https://github.com/wp-Breeder/Personal-essay/blob/master/doc/_images/2016-12-01-18-28-35.jpg)
+
 6) 打开浏览器输入服务器的域名:端口号，查看是否看见登录。（用mysql的账号登录），安装成功
 
 ![](https://github.com/wp-Breeder/Personal-essay/blob/master/doc/_images/2016-12-01-18-29-12.jpg)
