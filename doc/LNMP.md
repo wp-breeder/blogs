@@ -28,7 +28,7 @@ libfreetype6-dev \
 如果是ubuntu16.04 ，还需
 sudo apt-get install libssl-dev 
 ```
-![](./_image/2016-12-01-11-18-49.jpg)
+![](https://github.com/wp-Breeder/Personal-essay/blob/master/doc/_images/2016-12-01-11-18-49.jpg)
 
 ##2. 编译安装PHP
 ###2.1 **编译安装PHP7**
@@ -39,12 +39,12 @@ cd /opt
 wget http://downloads.php.net/~ab/old/php-7.1.0beta1.tar.gz
 ```
 
-![](./_image/2016-12-01-11-14-56.jpg)
+![](https://github.com/wp-Breeder/Personal-essay/blob/master/doc/_images/2016-12-01-11-14-56.jpg)
 2)	下载的比较慢，等下载完，解压php-7.1.0beta1.tar.gz,有可能有些警告忽略就行了。
 ```shell
 tar -zvxf php-7.1.0beta1.tar.gz
 ```
-![](./_image/2016-12-01-11-39-45.jpg)
+![](https://github.com/wp-Breeder/Personal-essay/blob/master/doc/_images/2016-12-01-11-39-45.jpg)
 
 3)	解压完毕，看到php-7.1.0beta1的文件夹，进入该文件夹，指定编译参数(建议写成一个脚本，防止出错后重复写)。
 ```shell
@@ -98,25 +98,25 @@ vi configure_php.sh
 chmod +x configure_php.sh
 ./configure_php.sh
 ```  
-![](./_image/2016-12-01-11-48-17.jpg)
+![](https://github.com/wp-Breeder/Personal-essay/blob/master/doc/_images/2016-12-01-11-48-17.jpg)
 5) 编译文件, 编译的速度跟机器的配置有关，也许有Warning请忽视.
 ```shell
 # -j4 可选参数 如果是多核可用，加快编译速度，具体请Google
 make [-j4]
 ```
-![](./_image/2016-12-01-11-53-33.jpg)
+![](https://github.com/wp-Breeder/Personal-essay/blob/master/doc/_images/2016-12-01-11-53-33.jpg)
 6) 安装PHP
 ```shell
 sudo make install
 ```
 
-![](./_image/2016-12-01-13-01-15.jpg)
+![](https://github.com/wp-Breeder/Personal-essay/blob/master/doc/_images/2016-12-01-13-01-15.jpg)
 7) 安装完成，创建php配置文件目录，并且复制php.ini到该目录.
 ```shell
 sudo mkdir /etc/php
 sudo cp php.ini-development /etc/php/php.ini
 ```
-![](./_image/2016-12-01-13-03-27.jpg)
+![](https://github.com/wp-Breeder/Personal-essay/blob/master/doc/_images/2016-12-01-13-03-27.jpg)
 8) **添加环境变量**，打开系统环境变量目录，在末尾添加,保存后，在终端输入source /etc/profile.
 ```shell
 sudo vi /etc/profile
@@ -132,37 +132,37 @@ source /etc/environment
 ```
 完成以上步骤，PHP安装完成。
 可用php -v 查看PHP版本
-![](./_image/2016-12-01-14-02-19.jpg)
+![](https://github.com/wp-Breeder/Personal-essay/blob/master/doc/_images/2016-12-01-14-02-19.jpg)
 ###2.2 编译安装Swoole扩展(需要可用)
 1)	下载Swoole源码到/opt
 ```shell
 cd /opt
  wget -c https://codeload.github.com/swoole/swoole-src/tar.gz/v1.9.0-stable
 ```
-![](./_image/2016-12-01-14-35-30.jpg)
+![](https://github.com/wp-Breeder/Personal-essay/blob/master/doc/_images/2016-12-01-14-35-30.jpg)
 2)下载成功，解压v1.9.0-stable。
 ```shell
 tar -zvxf v1.9.0-stable
 ```
-![](./_image/2016-12-01-14-37-00.jpg)
+![](https://github.com/wp-Breeder/Personal-essay/blob/master/doc/_images/2016-12-01-14-37-00.jpg)
 
 3)	进入Swoole目录，phpize(加载php扩展，官方说明，参见：[http://php.net/manual/en/install.pecl.phpize.php](http://php.net/manual/en/install.pecl.phpize.php))
 ```shell
 cd swoole-src-1.9.0-stable/
 phpize
 ```
-![](./_image/2016-12-01-14-40-52.jpg)
+![](https://github.com/wp-Breeder/Personal-essay/blob/master/doc/_images/2016-12-01-14-40-52.jpg)
 4)	指定编译参数。(*swoole*的*./configure*有很多额外参数，可以通过*./configure --help*命令查看,这里均选择默认项)
 ```shell
 ./configure --with-php-config=/usr/local/php/bin/php-config
 ```
-![](./_image/2016-12-01-14-43-17.jpg)
+![](https://github.com/wp-Breeder/Personal-essay/blob/master/doc/_images/2016-12-01-14-43-17.jpg)
 
 5)	指定编译参数的时候看看是否有error(画红线的部分)，如果有，请Google，这里就不做详细说明了。编译文件。
 ```shell
 make
 ```
-![](./_image/2016-12-01-14-44-14.jpg)
+![](https://github.com/wp-Breeder/Personal-essay/blob/master/doc/_images/2016-12-01-14-44-14.jpg)
 6)	安装Swoole
 ```shell
 make install
@@ -171,9 +171,9 @@ make install
 ```shell
 extension=swoole.so
 ```
-![](./_image/2016-12-01-14-46-26.jpg)
+![](https://github.com/wp-Breeder/Personal-essay/blob/master/doc/_images/2016-12-01-14-46-26.jpg)
 随后在终端中输入命令php -m查看扩展安装情况。如果在列出的扩展中看到了swoole，则说明安装成功。
-![](./_image/2016-12-01-14-47-59.jpg)
+![](https://github.com/wp-Breeder/Personal-essay/blob/master/doc/_images/2016-12-01-14-47-59.jpg)
 ##3. **编译安装Nginx与配置**
 ###3.1 **FastCGI和Ngnix+FastCGI的运行原理**
 >Nginx本身不能处理PHP，它只是个web服务器，当接收到请求后，如果是php请求，则发给php解释器处理，并把结果返回给客户端。
@@ -258,20 +258,20 @@ sudo apt-get install mysql-server mysql-client
 期间会提示你是否安装【Y/n】，输入y，安装好之后会提示你输入`mysql root`
 用户的密码，输入了按回车.
 
-![](./_image/2016-12-01-18-13-00.jpg)
+![](https://github.com/wp-Breeder/Personal-essay/blob/master/doc/_images/2016-12-01-18-13-00.jpg)
 此时会提示你再次输入，你就再输入，必须与刚才的密码一致.
-![](./_image/2016-12-01-18-13-19.jpg)   
+![](https://github.com/wp-Breeder/Personal-essay/blob/master/doc/_images/2016-12-01-18-13-19.jpg)   
 输入完成按回车，等待安装完成，mysql就安装好了.
 ##5. 安装phpMyadmin
 1) 下载安装包phpMyAdmin-4.6.3-all-languages.tar.gz
-![](./_image/2016-12-01-18-14-51.jpg)
+![](https://github.com/wp-Breeder/Personal-essay/blob/master/doc/_images/2016-12-01-18-14-51.jpg)
 2) 解压到任意目录(建议解压到/var/www/)
 ```shell
 cd  /var/www
 sudo tar -zvxf phpMyAdmin-4.6.3-all-languages.tar.gz
 sudo mv phpMyAdmin-4.6.3-all-languages  phpmyadmin
 ```
-![](./_image/2016-12-01-18-16-46.jpg)
+![](https://github.com/wp-Breeder/Personal-essay/blob/master/doc/_images/2016-12-01-18-16-46.jpg)
 3) 解压完成后可以看到一个文件夹phpMyAdmin-4.6.3-all-languages，进入该文件夹，拷贝配置文件,打开配置页面，修改$cfg['blowfish_secret'] 的值，
 ```shell
 #如:
@@ -289,11 +289,11 @@ sudo   cp   config.sample.inc.php  config.inc.php
 sudo  vi  config.inc.php
 ```
 
-![](./_image/2016-12-01-18-25-19.jpg)
+![](https://github.com/wp-Breeder/Personal-essay/blob/master/doc/_images/2016-12-01-18-25-19.jpg)
 
-![](./_image/2016-12-01-18-25-27.jpg)
+![](https://github.com/wp-Breeder/Personal-essay/blob/master/doc/_images/2016-12-01-18-25-27.jpg)
 
-![](./_image/2016-12-01-18-25-40.jpg)
+![](https://github.com/wp-Breeder/Personal-essay/blob/master/doc/_images/2016-12-01-18-25-40.jpg)
 4) 创建Nginx下关于phpmyadmin的配置文件，并修改配置。
 ```shell
 sudo vi  /etc/nginx/conf.d/phpmyadmin.conf
@@ -341,7 +341,7 @@ sudo service nginx restart
 mysql  -uroot -p密码
 按回车进入mysql
 
-![](./_image/2016-12-01-18-27-22.jpg)
+![](https://github.com/wp-Breeder/Personal-essay/blob/master/doc/_images/2016-12-01-18-27-22.jpg)
 ```shell
 #创建数据库phpmyadmin
 create database phpmyadmin
@@ -350,9 +350,9 @@ use  phpmyadmin
 source  /var/www/phpmyadmin/sql/create_tables.sql
 
 ```
-![](./_image/2016-12-01-18-28-13.jpg)
+![](https://github.com/wp-Breeder/Personal-essay/blob/master/doc/_images/2016-12-01-18-28-13.jpg)
 
-![](./_image/2016-12-01-18-28-35.jpg)
+![](https://github.com/wp-Breeder/Personal-essay/blob/master/doc/_images/2016-12-01-18-28-35.jpg)
 6) 打开浏览器输入服务器的域名:端口号，查看是否看见登录。（用mysql的账号登录），安装成功
 
-![](./_image/2016-12-01-18-29-12.jpg)
+![](https://github.com/wp-Breeder/Personal-essay/blob/master/doc/_images/2016-12-01-18-29-12.jpg)
