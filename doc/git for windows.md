@@ -123,29 +123,6 @@ Directory:自己想将文件放到的位置
 
 ![success](https://github.com/wp-Breeder/Personal-essay/blob/master/doc/_images/git%20for%20windows/setTortoiseGit/success.png "success")
 
-- 安装完成。
-
-###六、git server 的使用
-
->1.打开浏览器，输入[http://192.168.23.106:8000](http://192.168.23.106:8000),点击注册
-
-
-![register](https://github.com/wp-Breeder/Personal-essay/blob/master/doc/_images/git%20for%20windows/gitServer/register.png "login")
-
->2.注册完成后，登录
-
-![sign_in](https://github.com/wp-Breeder/Personal-essay/blob/master/doc/_images/git%20for%20windows/gitServer/sign_in.png "sign in")
-
-
->3.创建新仓库
-
-![createWarehouse](https://github.com/wp-Breeder/Personal-essay/blob/master/doc/_images/git%20for%20windows/gitServer/createWarehouse.png "create Warehouse")
-
->4.创建完成后，进入自己仓库，先添加ssh密匙（前面生成的公匙）
-
-![addSshkey](https://github.com/wp-Breeder/Personal-essay/blob/master/doc/_images/git%20for%20windows/gitServer/addSshkey.png "add SSH key")
-
->5.与之关联。
 
 
 
