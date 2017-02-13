@@ -27,6 +27,7 @@ libpng12-dev \
 libfreetype6-dev \
 如果是ubuntu16.04 ，还需
 sudo apt-get install libssl-dev 
+sudo apt-get install openssl
 ```
 ![](https://github.com/wp-Breeder/Personal-essay/blob/master/doc/_images/LNMP/2016-12-01-11-18-49.jpg)
 
