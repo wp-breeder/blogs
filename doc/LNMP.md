@@ -51,8 +51,7 @@ tar -zvxf php-7.1.0beta1.tar.gz
 ```shell
 cd php-7.1.0beta1/
 vi configure_php.sh
-######################################################################
-#以下是 configure_php.sh script 内容
+########################以下是configure_php.sh script 内容############################
 #!/bin/bash
 ./configure --prefix=/usr/local/php \
 --with-config-file-path=/etc/php \
@@ -94,13 +93,13 @@ vi configure_php.sh
 --with-imap-ssl
 ```
 注意，以上PHP编译选项根据实际情况可调整。（**查看编译参数 ./configure --help**）
-4) 运行该脚本, 注意查看是否有*error*, 如有自行*Google*, 这里就不做详细的介绍了.
+4)  运行该脚本, 注意查看是否有*error*, 如有自行*Google*, 这里就不做详细的介绍了.
 ```shell
 chmod +x configure_php.sh
 ./configure_php.sh
 ```  
 ![](https://github.com/wp-Breeder/Personal-essay/blob/master/doc/_images/LNMP/2016-12-01-11-48-17.jpg)
-5) 编译文件, 编译的速度跟机器的配置有关，也许有Warning请忽视.
+5)  编译文件, 编译的速度跟机器的配置有关，也许有Warning请忽视.
 ```shell
 # -j4 可选参数 如果是多核可用，加快编译速度，具体请Google
 make [-j4]
