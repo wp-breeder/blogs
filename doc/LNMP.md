@@ -4,6 +4,7 @@
 ###1.1  **写在前面的的话**
 
 1) 由于目前最新的PHP版本是php-7.1.0beta1，所以使用的是该版本。Swoole目前最新1.9.0-stable，所以使用的是该版本。
+
 2) 系统环境
 ```table
 系统(-) | 版本(-)
@@ -138,12 +139,14 @@ source /etc/environment
 可用php -v 查看PHP版本
 ![](https://github.com/wp-Breeder/Personal-essay/blob/master/doc/_images/LNMP/2016-12-01-14-02-19.jpg)
 ###2.2 编译安装Swoole扩展(需要可用)
+
 1)	下载Swoole源码到/opt
 ```shell
 cd /opt
  wget -c https://codeload.github.com/swoole/swoole-src/tar.gz/v1.9.0-stable
 ```
 ![](https://github.com/wp-Breeder/Personal-essay/blob/master/doc/_images/LNMP/2016-12-01-14-35-30.jpg)
+
 2)下载成功，解压v1.9.0-stable。
 ```shell
 tar -zvxf v1.9.0-stable
@@ -156,6 +159,7 @@ cd swoole-src-1.9.0-stable/
 phpize
 ```
 ![](https://github.com/wp-Breeder/Personal-essay/blob/master/doc/_images/LNMP/2016-12-01-14-40-52.jpg)
+
 4)	指定编译参数。(*swoole*的*./configure*有很多额外参数，可以通过*./configure --help*命令查看,这里均选择默认项)
 ```shell
 ./configure --with-php-config=/usr/local/php/bin/php-config
@@ -167,6 +171,7 @@ phpize
 make
 ```
 ![](https://github.com/wp-Breeder/Personal-essay/blob/master/doc/_images/LNMP/2016-12-01-14-44-14.jpg)
+
 6)	安装Swoole
 ```shell
 make install
