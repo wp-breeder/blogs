@@ -1,8 +1,8 @@
 
 
-###一、编译安装redis
+### 一、编译安装redis
 ----
-####1.下载 redis
+#### 1.下载 redis
 > 1.进入编译目录，这里我选择的`/opt`目录。
 
 		sudo chmod 777 /opt
@@ -20,7 +20,8 @@
 		sudo cp redis.conf /usr/local/redis-3.2.2/
 
 >4.到此时，`redis` 已经安装完成了，接下来配置 `redis`。
-####2.配置redis
+
+#### 2.配置redis
 >1.启动服务,修改配置文件，将其中的`daemonize no`行改为d`aemonize yes`，让其在后台运行。
 
 		cd /usr/local/redis-3.2.2/
@@ -51,7 +52,7 @@
 >5.进入`redis`客户端的命令为
 
 		 redis-cli
-###二、编译安装 phpredis-php7 扩展
+### 二、编译安装 phpredis-php7 扩展
 
 >1.下载 `phpredis` 扩展源码
 
@@ -89,8 +90,8 @@
 
 
 
-###附录.
+### 附录.
 
-####1.具体使用方法请参考[redis中文网](http://www.redis.cn/)
+#### 1.具体使用方法请参考[redis中文网](http://www.redis.cn/)
 
-####2. redis 源码下载地址  [http://download.redis.io/releases/](http://download.redis.io/releases/)
+#### 2. redis 源码下载地址  [http://download.redis.io/releases/](http://download.redis.io/releases/)
