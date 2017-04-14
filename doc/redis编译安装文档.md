@@ -81,6 +81,8 @@
 >4.到此时 `phpredis` 编译完成,开始配置 `phpredis`
 
 		sudo vi /etc/php/php.ini
+        #添加so
+        extension=redis.so
 
 >5.查看扩展是否安装成功
 
