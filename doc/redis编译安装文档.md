@@ -59,15 +59,25 @@ sudo update-rc.d redis defaults
 #centos 添加开机自启 7以上用systemd管理
 sudo chkconfig redis on
 ```
-##### 5. 查看`redis`服务是否正常启动
+##### 5. `redis`服务开启命令为
+```shell
+sudo service redis start
+#或
+sudo /etc/init.d/redis start
+```
+##### 6. 查看`redis`服务是否正常启动
 ```shell
  ps -aux |grep redis
 ```
-##### 6. 关闭`redis`的命令为
+##### 7. 关闭`redis`的命令为
 ```shell
+sudo service redis stop
+#或
+sudo /etc/init.d/redis stop
+#或
 sudo redis-cli shutdown
 ```
-##### 7. 进入`redis`客户端的命令为
+##### 8. 进入`redis`客户端的命令为
 ```shell
 redis-cli
 ```
