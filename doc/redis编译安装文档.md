@@ -33,12 +33,12 @@ sudo cp /opt/redis-3.2.2/redis.conf /etc/redis/6739.conf
 sudo vi /etc/redis/6739.conf
 #把 daemonize no 改为 aemonize yes，保存并退出
 ```
-##### 2. 复制安装包里的redis_init_script到/etc/init.d/,并赋权
+##### 3. 复制安装包里的redis_init_script到/etc/init.d/,并赋权
 ```shell
 sudo cp /opt/redis-3.2.2/utils/redis_init_script /etc/init.d/redis
 sudo chmod 777 /etc/init.d/redis
 ```
-##### 3. 配置redis启动脚本
+##### 4. 配置redis启动脚本
 ```shell
 sudo vi /etc/init.d/redis
     #配置端口 默认是6379
@@ -52,24 +52,24 @@ sudo vi /etc/init.d/redis
     #redis 配置文件绝对路径，默认端口号.conf
     CONF="/etc/redis/${REDISPORT}.conf"
 ```
-##### 4. 把`redis`注册成为系统服务
+##### 5. 把`redis`注册成为系统服务
 ```shell
 #ubuntu 注册服务 15.04用systemd管理
 sudo update-rc.d redis defaults
 #centos 添加开机自启 7以上用systemd管理
 sudo chkconfig redis on
 ```
-##### 5. `redis`服务开启命令为
+##### 6. `redis`服务开启命令为
 ```shell
 sudo service redis start
 #或
 sudo /etc/init.d/redis start
 ```
-##### 6. 查看`redis`服务是否正常启动
+##### 7. 查看`redis`服务是否正常启动
 ```shell
  ps -aux |grep redis
 ```
-##### 7. 关闭`redis`的命令为
+##### 8. 关闭`redis`的命令为
 ```shell
 sudo service redis stop
 #或
@@ -77,7 +77,7 @@ sudo /etc/init.d/redis stop
 #或
 sudo redis-cli shutdown
 ```
-##### 8. 进入`redis`客户端的命令为
+##### 9. 进入`redis`客户端的命令为
 ```shell
 redis-cli
 ```
