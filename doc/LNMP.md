@@ -30,6 +30,7 @@ libfreetype6-dev \
 如果是ubuntu16.04 ，还需
 sudo apt-get install libssl-dev 
 sudo apt-get install openssl
+ln -s /usr/lib/x86_64-linux-gnu/libssl.so  /usr/lib
 ```
 ![](https://github.com/wp-Breeder/Personal-essay/blob/master/doc/_images/LNMP/2016-12-01-11-18-49.jpg)
 
@@ -184,7 +185,7 @@ extension=swoole.so
 ![](https://github.com/wp-Breeder/Personal-essay/blob/master/doc/_images/LNMP/2016-12-01-14-46-26.jpg)
 随后在终端中输入命令php -m查看扩展安装情况。如果在列出的扩展中看到了swoole，则说明安装成功。
 ![](https://github.com/wp-Breeder/Personal-essay/blob/master/doc/_images/LNMP/2016-12-01-14-47-59.jpg)
-## 3. **编译安装Nginx与配置**
+## 3. **安装Nginx与配置**
 ### 3.1 **FastCGI和Ngnix+FastCGI的运行原理**
 >Nginx本身不能处理PHP，它只是个web服务器，当接收到请求后，如果是php请求，则发给php解释器处理，并把结果返回给客户端。
 Nginx一般是把请求发fastcgi管理进程处理，fascgi管理进程选择cgi子进程处理结果并返回被Nginx。
