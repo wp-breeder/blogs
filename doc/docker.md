@@ -1,7 +1,7 @@
 ## docker 基础教程
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`2017-04-28`
+`2017-04-28`
 [TOC]
-### 一、docker 安装
+###  一、docker 安装
 具体安装方法见[官方文档](https://docs.docker.com/engine/installation/)
 >作者注: 对容器与镜像的理解，容器就像虚拟机里实例，镜像就像快照。
 
