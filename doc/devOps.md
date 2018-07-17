@@ -64,7 +64,7 @@
     docker-compose logs -f
 ```
 ##### 1.3.3 访问gitLab(默认是设置root用户的密码)，并设置root用户的密码
-![gitLab-init](http://git.airocov.com/breeder/working-notes/raw/master/assets/web_server/gitLab-init.png)
+![gitLab-init](https://raw.githubusercontent.com/wp-Breeder/blogs/master/_images/devOps/gitLab-init.png)
 
 ##### 1.3.4 邮箱配置
 
@@ -131,7 +131,7 @@
 
 #### 2.3 git-runner 与gitLab-ci的关系图
 
-![gitLab-ci](http://git.airocov.com/breeder/working-notes/raw/master/assets/web_server/gitLab-ci.png)
+![gitLab-ci](https://raw.githubusercontent.com/wp-Breeder/blogs/master/_images/devOps/gitLab-ci.png)
 
 #### 2.4 安装文档
 
