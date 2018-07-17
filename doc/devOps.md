@@ -50,7 +50,8 @@
         # Add any other gitlab.rb configuration here, each on its own line
     ports:
         - '80:80'
-        - '443:443'
+        #用于开启gitlab-pages功能
+        - '8080:8080'
         - '3022:22'
     volumes:
         - '~/gitlab/config:/etc/gitlab'
@@ -63,7 +64,7 @@
     docker-compose logs -f
 ```
 ##### 1.3.3 访问gitLab(默认是设置root用户的密码)，并设置root用户的密码
-![gitLab-init](https://github.com/wp-Breeder/Personal-essay/blob/master/_images/devOps/gitLab-init.png)
+![gitLab-init](http://git.airocov.com/breeder/working-notes/raw/master/assets/web_server/gitLab-init.png)
 
 ##### 1.3.4 邮箱配置
 
@@ -130,7 +131,7 @@
 
 #### 2.3 git-runner 与gitLab-ci的关系图
 
-![gitLab-ci](https://github.com/wp-Breeder/Personal-essay/blob/master/_images/devOps/gitLab-ci.png)
+![gitLab-ci](http://git.airocov.com/breeder/working-notes/raw/master/assets/web_server/gitLab-ci.png)
 
 #### 2.4 安装文档
 
@@ -164,7 +165,7 @@
 - 在仓库根目录新建一个.gitlab-ci.yml文件，文件内容如下：
 >gitlab-runner的 tags是用来标识.gitlab-ci.yml是用哪个runner解析
 ```yml
-    image: bashell/alpine-bash
+    image: alpine:latest
     stages:
     - test
     - build
@@ -202,13 +203,14 @@
 
     在宿主机上安装xz-utils, gitlab [issue地址](https://gitlab.com/gitlab-org/gitlab-runner/issues/2533)
 
+```shell
+    sudo apt-get install xz-utils
+```
 
 
 
-### 3. 附录
-
+###3. 附录
 <font color="red">注意：</font> 本文档如果出现国内安装方式与国外安装方式，是指国内访问比较慢，但是可以使用。
-
 1. 安装git 
 
 - 在 Debian / Ubuntu 上安装
@@ -270,3 +272,17 @@ docker-compose[版本列表](https://github.com/docker/compose/releases)
     #或者
     pkill X
 ```
+5. gitlab-pages 开启
+
+参见[本地搭建的GitLab中开启Pages功能，不需要域名也可以](http://www.daxiblog.com/2018/05/17/%E6%9C%AC%E5%9C%B0%E6%90%AD%E5%BB%BA%E7%9A%84gitlab%E4%B8%AD%E5%BC%80%E5%90%AFpages%E5%8A%9F%E8%83%BD%EF%BC%8C%E4%B8%8D%E9%9C%80%E8%A6%81%E5%9F%9F%E5%90%8D%E4%B9%9F%E5%8F%AF%E4%BB%A5/),但是有一点需要注意的是 
+
+gitlab-ctl restart 重启GitLab，GitLab Pages功能不生效,需用重新加载配置的方法(docker 安装gitlab,版本为10.8.4 (2268d0c)
+
+ ```shell
+    #重新加载配置文件, 必须重新加载配置文件，不然nginx没有 gitlab-pages.conf文件
+    gitlab-ctl reconfigure  
+ ```
+
+ 6. GitLab代码自动备份
+
+ 参见[docker部署的GitLab代码自动备份](https://blog.csdn.net/u014258541/article/details/79317180)
