@@ -66,6 +66,7 @@
 ##### 1.3.3 访问gitLab(默认是设置root用户的密码)，并设置root用户的密码
 ![gitLab-init](https://raw.githubusercontent.com/wp-Breeder/blogs/master/_images/devOps/gitLab-init.png)
 
+
 ##### 1.3.4 邮箱配置
 
 - 修改配置文件 : ~/gitlab/gitlab.rb
