@@ -4,7 +4,7 @@
 <font color=#ff00 size=4>注意：</font>windows只支持32位，不支持64位
 [下载地址](http://www.oracle.com/technetwork/topics/winsoft-085727.html)
 
-####2. 解压
+#### 2. 解压
 解压安装包，无需安装
 
 #### 3. 设置环境变量
